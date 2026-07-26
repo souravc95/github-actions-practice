@@ -1,0 +1,15 @@
+name: Python-Lint
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  Python lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cone the code
+        uses: actions/checkout@v7
+
+      -name: Install Linter
+        run: pip install ruff
+  
