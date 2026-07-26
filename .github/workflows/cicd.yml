@@ -12,18 +12,21 @@ jobs:
         run: echo "clone the code"
 
   Build:
+    needs: [Code]
     runs-on: ubuntu-latest
     steps:
       - name: Build Code
         run: echo "Build the code"
 
   Test:
+    needs: [Build]
     runs-on: ubuntu-latest
     steps:
       - name: Test code
         run: echo "test the code"
 
   Deploy:
+    needs: [Test]
     runs-on: ubuntu-latest
     steps:
       - name: Deploy Code
