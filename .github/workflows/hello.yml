@@ -1,7 +1,9 @@
 name: New Hello
 
 on: 
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   Project-Name:
