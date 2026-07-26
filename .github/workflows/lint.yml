@@ -12,4 +12,6 @@ jobs:
 
       - name: Install Linter
         run: pip install ruff
+      - name: Check file using Liting
+        run: ruff check .
   
